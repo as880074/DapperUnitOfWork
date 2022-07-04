@@ -8,5 +8,6 @@ namespace UnitPattenDemo.Repository.Interface
     public interface IUserRepository : IGenericRepository<Users>
     {
         public void TestException();
+        public int CreateTest(Users users);
     }
 }

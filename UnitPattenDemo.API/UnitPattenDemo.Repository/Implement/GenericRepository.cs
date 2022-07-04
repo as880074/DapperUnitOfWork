@@ -14,7 +14,7 @@ namespace UnitPattenDemo.Repository.Implement
         protected IDbTransaction Transaction { get; }
         protected IDbConnection Connection => Transaction.Connection;
 
-        public IUnitOfWork UnitOfWork { get; }
+        //public IUnitOfWork UnitOfWork { get; }
 
         public GenericRepository(IDbTransaction transaction)
         {

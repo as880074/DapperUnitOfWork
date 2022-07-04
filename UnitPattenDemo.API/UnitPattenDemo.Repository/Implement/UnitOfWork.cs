@@ -24,12 +24,23 @@ namespace UnitPattenDemo.Repository.Implement
             _userRepository ?? (_userRepository = new UserRepository(_transaction));
 
 
+        // Connect() #must have
+        
+        // # Transaction scope
+        // Start()
+        // Commit()/Complete()
+        // Rollback()
+
+        //Dispose
+
         public void Start(CompanyDomains company) 
         {
-            _connection = _databaseHelper.GetSQLConnection(company);
+            //_connection = _databaseHelper.GetSQLConnection(company);
+            _connection = _databaseHelper.GetLocalTest();
             _connection.Open();
             _transaction = _connection.BeginTransaction();
         }
+
         public void Complete()
         {
             try

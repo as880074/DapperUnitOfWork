@@ -21,6 +21,8 @@ namespace UnitPattenDemo.Repository.Misc
         public string GII => this.configuration.GetConnectionString("GII");
         public string OG => this.configuration.GetConnectionString("OG");
 
+        public string Local => "server=127.0.0.1,56789;database=DemoTable;user=sa;password=1q2w4r5t_";
+
         //public string GetConnectionString(CompanyDomains company) => this.configuration.GetConnectionString(company);
         //public string HousePirce => this._evertrustDatabases.GetConnectionString("HOUSEPRICE");
         //public string HousePriceMySQL => this._evertrustDatabases.GetConnectionString("HOUSEPRICE_MYSQL_AWS");

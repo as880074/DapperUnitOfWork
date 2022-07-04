@@ -8,5 +8,6 @@ namespace UnitPattenDemo.Repository.Misc
     {
         public string GII { get; }
         public string OG { get; }
+        public string Local { get; }
     }
 }

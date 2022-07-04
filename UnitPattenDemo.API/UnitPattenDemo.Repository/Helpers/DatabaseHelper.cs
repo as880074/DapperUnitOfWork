@@ -19,7 +19,7 @@ namespace UnitPattenDemo.Repository.Helpers
 
         public IDbConnection GetLocalTest()
         {
-            return new SqlConnection("server=127.0.0.1,56789;database=DemoTable;user=sa;password=1q2w4r5t_");
+            return new SqlConnection(_databaseConstants.Local);
         }
         public IDbConnection GetSQLConnection(CompanyDomains company)
         {
