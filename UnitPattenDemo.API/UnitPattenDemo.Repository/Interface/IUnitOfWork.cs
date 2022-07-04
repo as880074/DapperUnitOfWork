@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
+using UnitPattenDemo.Repository.Enums;
 using UnitPattenDemo.Repository.Implement;
 
 namespace UnitPattenDemo.Repository.Interface
@@ -11,7 +12,7 @@ namespace UnitPattenDemo.Repository.Interface
         //IDbConnection Connection { get; }
         //IDbTransaction Transaction { get; }
         IUserRepository UserRepository { get; }
-        void Start();
+        void Start(CompanyDomains company);
         void Complete();
     }
 }

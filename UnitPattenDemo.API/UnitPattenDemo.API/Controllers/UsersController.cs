@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using UnitPattenDemo.Repository.Enums;
 using UnitPattenDemo.Repository.Interface;
 using UnitPattenDemo.Repository.Models;
 
@@ -24,13 +25,13 @@ namespace UnitPattenDemo.API.Controllers
                 FirstName = "123",
                 LastName ="456"
             };
-            unitOfWork.Start();
+            unitOfWork.Start(CompanyDomains.GIIPH);
             unitOfWork.UserRepository.Add(user);
             unitOfWork.UserRepository.Add(user);
             unitOfWork.UserRepository.Add(user);
             unitOfWork.UserRepository.Add(user);
             unitOfWork.UserRepository.TestException();
-                unitOfWork.UserRepository.Add(user);
+            unitOfWork.UserRepository.Add(user);
             unitOfWork.UserRepository.Add(user);
             unitOfWork.Complete();
             return Ok();

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
+using UnitPattenDemo.Repository.Enums;
 using UnitPattenDemo.Repository.Helpers;
 using UnitPattenDemo.Repository.Interface;
 
@@ -23,9 +24,9 @@ namespace UnitPattenDemo.Repository.Implement
             _userRepository ?? (_userRepository = new UserRepository(_transaction));
 
 
-        public void Start() 
+        public void Start(CompanyDomains company) 
         {
-            _connection = _databaseHelper.GetHousePriceConnection();
+            _connection = _databaseHelper.GetSQLConnection(company);
             _connection.Open();
             _transaction = _connection.BeginTransaction();
         }

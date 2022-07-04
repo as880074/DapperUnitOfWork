@@ -6,8 +6,7 @@ namespace UnitPattenDemo.Repository.Misc
 {
     public interface IDatabaseConstants
     {
-        //string GII { get; }
-
-        //string OG { get; }
+        public string GII { get; }
+        public string OG { get; }
     }
 }
